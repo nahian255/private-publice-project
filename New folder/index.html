@@ -30,6 +30,7 @@
         <section class=" m-20 flex ">
             <div class="w-3/4">
                 <div class="grid grid-cols-3 gap-7 grid-rows-2">
+                    <!-- card 1----- -->
                     <div class="card card-compact w-60 bg-base-100 ">
                         <figure><img
                                 src="https://www.mathrubhumi.com/polopoly_fs/1.5702588.1622198942!/image/image.jpg_gen/derivatives/landscape_1080_600/image.jpg"
@@ -38,74 +39,92 @@
                             <h2 class="card-title">Neymar Jr</h2>
                             <p> 36 Goals ..120 Assist</p>
                             <div class="card-actions justify-center">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button class="btn btn-primary" onclick="addToCard(this)">SELECT</button>
                             </div>
                         </div>
                     </div>
+                    <!-- card -2 -->
                     <div class="card card-compact w-60 bg-base-100 ">
                         <figure><img
-                                src="https://www.mathrubhumi.com/polopoly_fs/1.5702588.1622198942!/image/image.jpg_gen/derivatives/landscape_1080_600/image.jpg"
+                                src="https://c.ndtvimg.com/2021-10/bk5ae238_lionel-messi-afp_625x300_01_October_21.jpg"
                                 alt="Shoes" /></figure>
                         <div class="card-body bg-black">
-                            <h2 class="card-title">Neymar Jr</h2>
+                            <h2 class="card-title">Lionel Messi</h2>
                             <p> 36 Goals ..120 Assist</p>
                             <div class="card-actions justify-center">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button class="btn btn-primary" onclick="addToCard(this)">SELECT</button>
                             </div>
                         </div>
                     </div>
+                    <!-- card- 3 -->
                     <div class="card card-compact w-60 bg-base-100 ">
                         <figure><img
-                                src="https://www.mathrubhumi.com/polopoly_fs/1.5702588.1622198942!/image/image.jpg_gen/derivatives/landscape_1080_600/image.jpg"
+                                src="https://estaticos-cdn.sport.es/clip/33bdf598-d250-448b-be22-83c895cf7780_alta-libre-aspect-ratio_default_0.jpg"
                                 alt="Shoes" /></figure>
                         <div class="card-body bg-black">
-                            <h2 class="card-title ">Neymar Jr</h2>
+                            <h2 class="card-title ">Sergio Ramos</h2>
                             <p> 36 Goals ..120 Assist</p>
                             <div class="card-actions justify-center">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button class="btn btn-primary" onclick="addToCard(this)">SELECT</button>
                             </div>
                         </div>
                     </div>
+                    <!-- card 4 -->
                     <div class="card card-compact w-60 bg-base-100 ">
                         <figure><img
-                                src="https://www.mathrubhumi.com/polopoly_fs/1.5702588.1622198942!/image/image.jpg_gen/derivatives/landscape_1080_600/image.jpg"
+                                src="https://www.lismorecitynews.com.au/images/transform/v1/crop/frm/silverstone-feed-data/f4af19c3-e6a2-45de-9baf-cc44cee8abee.jpg/r0_0_800_600_w800_h600_fmax.jpg"
                                 alt="Shoes" /></figure>
                         <div class="card-body bg-black">
-                            <h2 class="card-title">Neymar Jr</h2>
+                            <h2 class="card-title">Kylian Mbappé</h2>
                             <p> 36 Goals ..120 Assist</p>
                             <div class="card-actions justify-center">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button class="btn btn-primary" onclick="addToCard(this)">SELECT</button>
                             </div>
                         </div>
                     </div>
+                    <!-- card 5 -->
                     <div class="card card-compact w-60 bg-base-100 ">
                         <figure><img
-                                src="https://www.mathrubhumi.com/polopoly_fs/1.5702588.1622198942!/image/image.jpg_gen/derivatives/landscape_1080_600/image.jpg"
+                                src="https://estaticos-cdn.elperiodico.com/clip/f68fcb3d-a96f-4294-a1e0-0d37c4eb4c20_alta-libre-aspect-ratio_default_0.jpg"
                                 alt="Shoes" /></figure>
                         <div class="card-body bg-black">
-                            <h2 class="card-title">Neymar Jr</h2>
+                            <h2 class="card-title">Vítor Machado</h2>
                             <p> 36 Goals ..120 Assist</p>
                             <div class="card-actions justify-center">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button class="btn btn-primary" onclick="addToCard(this)">SELECT</button>
                             </div>
                         </div>
                     </div>
+                    <!-- card 6 -->
                     <div class="card card-compact w-60 bg-base-100 ">
                         <figure><img
-                                src="https://www.mathrubhumi.com/polopoly_fs/1.5702588.1622198942!/image/image.jpg_gen/derivatives/landscape_1080_600/image.jpg"
+                                src="https://en.psg.fr/media/228807/aur_8817-copy.jpg?quality=60&width=1600&bgcolor=ffffff"
                                 alt="Shoes" /></figure>
                         <div class="card-body bg-black">
-                            <h2 class="card-title">Neymar Jr</h2>
+                            <h2 class="card-title">Renato Sanches</h2>
                             <p> 36 Goals ..120 Assist</p>
                             <div class="card-actions justify-center">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button class="btn btn-primary" onclick="addToCard(this)">SELECT</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bg-green-600 w-1/4">
-                <h1>bb</h1>
+            <div class=" w-1/4">
+                <div class="bg-black h-2/5 mb-4">
+                    <h1 class="text-2xl text-center">Selected - Five</h1>
+                    <div class="overflow-x-auto">
+                        <table class="table w-full">
+
+                            <tbody class="table-body">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-yellow-800 h-3/5">
+                    <h1>bb</h1>
+                </div>
             </div>
         </section>
     </main>
