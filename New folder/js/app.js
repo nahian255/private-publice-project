@@ -20,24 +20,37 @@ function display(cardPlayer) {
           
         </ul>`;
 
+        if (i === 6) {
+            alert
+        }
         ulBody.appendChild(ul);
 
     }
-
+    if (document.getElementById('ul-body').childElementCount >= 6) {
+        alert('limit finish');
+        return false;
+    }
 }
 
 function addToCard(element) {
 
-    // console.log(element.parentNode.parentNode.children[0].innerText);
     const playerName = element.parentNode.parentNode.children[0].innerText;
 
     const playerObj = {
         playerName: playerName,
     }
     cardArray.push(playerObj);
-    // console.log(cardArray)
 
     display(cardArray);
+
+    // const oneBtn = document.getElementById('myBtn');
+    // oneBtn.disabled = true;
+    // // document.getElementById('myBtn2').disabled = true;
+    // // document.getElementById('myBtn3').disabled = true;
+    // // document.getElementById('myBtn4').disabled = true;
+    // // document.getElementById('myBtn5').disabled = true;
+    // const sixBtn = document.getElementById('btn-rs');
+    // sixBtn.disabled = true;
 }
 
 function inputFieldValueById(inputFieldId) {
