@@ -67,12 +67,11 @@ document.getElementById('calculate').addEventListener('click', function () {
         const coachExpenses = parseFloat(coachInputFieldString);
 
 
-        const total = ppx + managerExpenses + coachExpenses;
+        const total = playerExpenses + managerExpenses + coachExpenses;
 
         const totalExpensesField = document.getElementById('total-expenses');
-        const toatalString = (totalExpensesField.innerText = total);
-        const totalNumber = parseFloat(toatalString);
-        totalNumber = total;
+        totalExpensesField.innerText = total;
+
 
     })
 
