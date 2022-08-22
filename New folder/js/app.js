@@ -43,25 +43,43 @@ function addToCard(element) {
 }
 
 
+document.getElementById('calculate').addEventListener('click', function () {
+    const parPlayerPriceField = document.getElementById('per-player');
+    const parPlayerPriceString = parPlayerPriceField.value;
+    const parPlayerPrice = parseFloat(parPlayerPriceString);
+
+
+    const playerExpenses = parPlayerPrice * 5;
+    const playerExpensesfield = document.getElementById('player-expenses');
+    const ppx = parseFloat(playerExpensesfield.innerText);
+    playerExpensesfield.innerText = playerExpenses;
+
+
+    document.getElementById('calculate-total').addEventListener('click', function () {
+
+
+        const managerInputField = document.getElementById('manager-cost');
+        const managerInputFieldString = managerInputField.value;
+        const managerExpenses = parseFloat(managerInputFieldString);
+
+        const coachInputField = document.getElementById('coach-cost');
+        const coachInputFieldString = coachInputField.value;
+        const coachExpenses = parseFloat(coachInputFieldString);
+
+
+        const total = ppx + managerExpenses + coachExpenses;
+
+        const totalExpensesField = document.getElementById('total-expenses');
+        const toatalString = (totalExpensesField.innerText = total);
+        const totalNumber = parseFloat(toatalString);
+        totalNumber = total;
+
+    })
+
+})
 
 
 
 
 
 
-
-// for (let i = 0; i > cardPlayer.length; i++) {
-    //     const name = cardArray[i].playerName;
-
-    //     const tr = document.createElement('tr');
-    //     tr.innerHTML = `
-    // <!-- row 1 -->
-    // <tr>
-    //   <th>1</th>
-    //   <td>Cy Ganderton</td>
-    //   <td>Quality Control Specialist</td>
-    //   <td>Blue</td>
-    // </tr>`;
-
-    //     tableBody.appendChild(tr);
-    // }
