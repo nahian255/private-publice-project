@@ -1,5 +1,5 @@
 const cardArray = [];
-
+// Player name added part..........
 function display(cardPlayer) {
     console.log(cardPlayer);
 
@@ -8,23 +8,16 @@ function display(cardPlayer) {
 
 
     for (let i = 0; i < cardPlayer.length; i++) {
-        // console.log(cardArray[i].playerName);
-        const name = cardArray[i].playerName;
-        console.log(name)
 
+        const name = cardArray[i].playerName;
         const ul = document.createElement('ul');
 
         ul.innerHTML = `
         <ul>
-          <li>${i + 1}.  ${name}</li>
-          
+          <li>${i + 1}. ${name}</li>
         </ul>`;
 
-        if (i === 6) {
-            alert
-        }
         ulBody.appendChild(ul);
-
     }
     if (document.getElementById('ul-body').childElementCount >= 6) {
         alert('limit finish');
@@ -46,6 +39,7 @@ function addToCard(element) {
 
 }
 
+// callculate part..............
 
 function inputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
