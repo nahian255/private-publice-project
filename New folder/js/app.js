@@ -42,29 +42,26 @@ function addToCard(element) {
     display(cardArray);
 }
 
+function inputFieldValueById(inputFieldId) {
+    const inputField = document.getElementById(inputFieldId);
+    const inputFieldValueString = inputField.value;
+    const inputFieldValue = parseFloat(inputFieldValueString);
+    return inputFieldValue;
+
+}
 
 document.getElementById('calculate').addEventListener('click', function () {
-    const parPlayerPriceField = document.getElementById('per-player');
-    const parPlayerPriceString = parPlayerPriceField.value;
-    const parPlayerPrice = parseFloat(parPlayerPriceString);
 
+    const perPlayerPrice = inputFieldValueById('per-player');
 
-    const playerExpenses = parPlayerPrice * 5;
+    const playerExpenses = perPlayerPrice * 5;
     const playerExpensesfield = document.getElementById('player-expenses');
-    const ppx = parseFloat(playerExpensesfield.innerText);
     playerExpensesfield.innerText = playerExpenses;
-
 
     document.getElementById('calculate-total').addEventListener('click', function () {
 
-
-        const managerInputField = document.getElementById('manager-cost');
-        const managerInputFieldString = managerInputField.value;
-        const managerExpenses = parseFloat(managerInputFieldString);
-
-        const coachInputField = document.getElementById('coach-cost');
-        const coachInputFieldString = coachInputField.value;
-        const coachExpenses = parseFloat(coachInputFieldString);
+        const managerExpenses = inputFieldValueById('manager-cost');
+        const coachExpenses = inputFieldValueById('coach-cost');
 
 
         const total = playerExpenses + managerExpenses + coachExpenses;
