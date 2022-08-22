@@ -35,6 +35,7 @@ function display(cardPlayer) {
 function addToCard(element) {
 
     const playerName = element.parentNode.parentNode.children[0].innerText;
+    element.setAttribute('disabled', true);
 
     const playerObj = {
         playerName: playerName,
@@ -43,15 +44,8 @@ function addToCard(element) {
 
     display(cardArray);
 
-    // const oneBtn = document.getElementById('myBtn');
-    // oneBtn.disabled = true;
-    // // document.getElementById('myBtn2').disabled = true;
-    // // document.getElementById('myBtn3').disabled = true;
-    // // document.getElementById('myBtn4').disabled = true;
-    // // document.getElementById('myBtn5').disabled = true;
-    // const sixBtn = document.getElementById('btn-rs');
-    // sixBtn.disabled = true;
 }
+
 
 function inputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
