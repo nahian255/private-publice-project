@@ -3,8 +3,8 @@ const cardArray = [];
 function display(cardPlayer) {
     console.log(cardPlayer);
 
-    const tableBody = document.getElementById('table-body');
-    tableBody.innerHTML = '';
+    const ulBody = document.getElementById('ul-body');
+    ulBody.innerHTML = '';
 
 
     for (let i = 0; i < cardPlayer.length; i++) {
@@ -12,17 +12,15 @@ function display(cardPlayer) {
         const name = cardArray[i].playerName;
         console.log(name)
 
-        const tr = document.createElement('tr');
+        const ul = document.createElement('ul');
 
-        tr.innerHTML = `
-        <!-- row 1 -->
-        <tr >
-          <th>${i + 1}</th>
-          <td>${name}</td>
+        ul.innerHTML = `
+        <ul>
+          <li>${i + 1}.  ${name}</li>
           
-        </tr>`;
+        </ul>`;
 
-        tableBody.appendChild(tr);
+        ulBody.appendChild(ul);
 
     }
 
@@ -47,19 +45,17 @@ function inputFieldValueById(inputFieldId) {
     const inputFieldValueString = inputField.value;
     const inputFieldValue = parseFloat(inputFieldValueString);
     return inputFieldValue;
-
 }
 
 document.getElementById('calculate').addEventListener('click', function () {
-
     const perPlayerPrice = inputFieldValueById('per-player');
 
     const playerExpenses = perPlayerPrice * 5;
     const playerExpensesfield = document.getElementById('player-expenses');
     playerExpensesfield.innerText = playerExpenses;
 
-    document.getElementById('calculate-total').addEventListener('click', function () {
 
+    document.getElementById('calculate-total').addEventListener('click', function () {
         const managerExpenses = inputFieldValueById('manager-cost');
         const coachExpenses = inputFieldValueById('coach-cost');
 
