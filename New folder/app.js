@@ -11,7 +11,8 @@ function display(cardPlayer) {
 
         const name = cardArray[i].playerName;
         const ul = document.createElement('ul');
-
+        // let ulLength = ul.childElementCount;
+        // console.log(ulLength);
         ul.innerHTML = `
         <ul>
           <li>${i + 1}. ${name}</li>
@@ -21,7 +22,7 @@ function display(cardPlayer) {
     }
     if (document.getElementById('ul-body').childElementCount >= 6) {
         alert('limit finish');
-        return false;
+        return true;
     }
 }
 
@@ -51,7 +52,7 @@ function inputFieldValueById(inputFieldId) {
 document.getElementById('calculate').addEventListener('click', function () {
     const perPlayerPrice = inputFieldValueById('per-player');
 
-    const playerExpenses = perPlayerPrice * 5;
+    const playerExpenses = perPlayerPrice * cardArray.length;
     const playerExpensesfield = document.getElementById('player-expenses');
     playerExpensesfield.innerText = playerExpenses;
 
